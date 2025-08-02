@@ -63,7 +63,7 @@ export default function Register() {
                 required
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors text-gray-900 placeholder-gray-500"
                 placeholder="Enter your full name"
               />
             </div>
@@ -79,7 +79,7 @@ export default function Register() {
                 required
                 value={formData.grade}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors text-gray-900"
               >
                 <option value="">Select your grade</option>
                 <option value="1">Grade 1</option>
@@ -109,7 +109,7 @@ export default function Register() {
                 required
                 value={formData.schoolName}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors text-gray-900 placeholder-gray-500"
                 placeholder="Enter your school name"
               />
             </div>
@@ -126,7 +126,7 @@ export default function Register() {
                 required
                 value={formData.contactNumber}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors text-gray-900 placeholder-gray-500"
                 placeholder="Enter your contact number"
               />
             </div>
