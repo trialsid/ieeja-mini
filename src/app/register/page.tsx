@@ -7,10 +7,11 @@ export default function Register() {
     name: "",
     grade: "",
     schoolName: "",
-    contactNumber: ""
+    contactNumber: "",
+    address: ""
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -128,6 +129,23 @@ export default function Register() {
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors text-gray-900 placeholder-gray-500"
                 placeholder="Enter your contact number"
+              />
+            </div>
+
+            {/* Address Field */}
+            <div>
+              <label htmlFor="address" className="block text-sm font-medium text-gray-900 mb-2">
+                Address *
+              </label>
+              <textarea
+                id="address"
+                name="address"
+                required
+                value={formData.address}
+                onChange={handleInputChange}
+                rows={3}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors text-gray-900 placeholder-gray-500 resize-none"
+                placeholder="Enter your complete address"
               />
             </div>
 
