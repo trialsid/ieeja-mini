@@ -1,3 +1,5 @@
+import InstallButton from "@/components/InstallButton";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-amber-100">
@@ -24,9 +26,14 @@ export default function Home() {
           <h2 className="text-5xl font-bold text-gray-900 mb-4">
             Welcome to <span className="text-yellow-600">ieeja.com</span>
           </h2>
-          <p className="text-xl text-gray-800 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-800 max-w-2xl mx-auto mb-6">
             Your gateway to exam registration and directory services
           </p>
+          
+          {/* Install Button */}
+          <div className="flex justify-center">
+            <InstallButton />
+          </div>
         </div>
 
         {/* Feature Boxes */}
