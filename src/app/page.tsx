@@ -68,9 +68,9 @@ export default function Home() {
               <p className="text-gray-800 mb-6">
                 Find contact information quickly. Search our comprehensive directory for staff and department contacts.
               </p>
-              <button className="border border-yellow-600 text-yellow-600 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-50 transition-colors w-full">
+              <a href="/directory" className="inline-block border border-yellow-600 text-yellow-600 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-50 transition-colors w-full text-center">
                 Browse Directory
-              </button>
+              </a>
             </div>
           </div>
         </div>
