@@ -43,9 +43,9 @@ export default function Home() {
               <p className="text-gray-600 mb-6">
                 Quick and easy exam registration process. Register for upcoming exams and track your applications.
               </p>
-              <button className="bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors w-full">
+              <a href="/register" className="inline-block bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors w-full text-center">
                 Register Now
-              </button>
+              </a>
             </div>
           </div>
 
