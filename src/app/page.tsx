@@ -24,7 +24,7 @@ export default function Home() {
           <h2 className="text-5xl font-bold text-gray-900 mb-4">
             Welcome to <span className="text-yellow-600">ieeja.com</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-800 max-w-2xl mx-auto">
             Your gateway to exam registration and directory services
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Register for Exam</h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-800 mb-6">
                 Quick and easy exam registration process. Register for upcoming exams and track your applications.
               </p>
               <a href="/register" className="inline-block bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors w-full text-center">
@@ -58,7 +58,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Telephone Directory</h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-800 mb-6">
                 Find contact information quickly. Search our comprehensive directory for staff and department contacts.
               </p>
               <button className="border border-yellow-600 text-yellow-600 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-50 transition-colors w-full">

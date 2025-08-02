@@ -47,13 +47,13 @@ export default function Register() {
         <div className="bg-white rounded-xl shadow-lg p-8 border border-yellow-200">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Exam Registration</h1>
-            <p className="text-gray-600">Fill out the form below to register for the exam</p>
+            <p className="text-gray-800">Fill out the form below to register for the exam</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name Field */}
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
                 Full Name *
               </label>
               <input
@@ -70,7 +70,7 @@ export default function Register() {
 
             {/* Grade Field */}
             <div>
-              <label htmlFor="grade" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="grade" className="block text-sm font-medium text-gray-900 mb-2">
                 Grade *
               </label>
               <select
@@ -99,7 +99,7 @@ export default function Register() {
 
             {/* School Name Field */}
             <div>
-              <label htmlFor="schoolName" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="schoolName" className="block text-sm font-medium text-gray-900 mb-2">
                 School Name *
               </label>
               <input
@@ -116,7 +116,7 @@ export default function Register() {
 
             {/* Contact Number Field */}
             <div>
-              <label htmlFor="contactNumber" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="contactNumber" className="block text-sm font-medium text-gray-900 mb-2">
                 Contact Number *
               </label>
               <input
