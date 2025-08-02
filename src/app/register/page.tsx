@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { supabase } from "@/lib/supabase";
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -11,6 +12,9 @@ export default function Register() {
     address: ""
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -19,10 +23,42 @@ export default function Register() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Registration submitted successfully!");
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    try {
+      const { data, error } = await supabase
+        .from('registrations')
+        .insert([
+          {
+            name: formData.name,
+            grade: formData.grade,
+            school_name: formData.schoolName,
+            contact_number: formData.contactNumber,
+            address: formData.address
+          }
+        ]);
+
+      if (error) {
+        throw error;
+      }
+
+      setSubmitMessage("Registration submitted successfully!");
+      setFormData({
+        name: "",
+        grade: "",
+        schoolName: "",
+        contactNumber: "",
+        address: ""
+      });
+    } catch (error) {
+      console.error('Error submitting registration:', error);
+      setSubmitMessage("Error submitting registration. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -149,13 +185,24 @@ export default function Register() {
               />
             </div>
 
+            {/* Submit Message */}
+            {submitMessage && (
+              <div className={`p-4 rounded-lg text-center ${submitMessage.includes('Error') 
+                ? 'bg-red-50 text-red-700 border border-red-200' 
+                : 'bg-green-50 text-green-700 border border-green-200'
+              }`}>
+                {submitMessage}
+              </div>
+            )}
+
             {/* Submit Button */}
             <div className="pt-4">
               <button
                 type="submit"
-                className="w-full bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-yellow-700 transition-colors focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
+                disabled={isSubmitting}
+                className="w-full bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-yellow-700 transition-colors focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
-                Submit Registration
+                {isSubmitting ? "Submitting..." : "Submit Registration"}
               </button>
             </div>
           </form>
