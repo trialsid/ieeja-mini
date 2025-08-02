@@ -29,6 +29,20 @@ export default function Register() {
     setSubmitMessage("");
 
     try {
+      // Check if Supabase is properly configured
+      if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+        console.log("Form submitted (development mode):", formData);
+        setSubmitMessage("Registration submitted successfully! (Development mode)");
+        setFormData({
+          name: "",
+          grade: "",
+          schoolName: "",
+          contactNumber: "",
+          address: ""
+        });
+        return;
+      }
+
       const { data, error } = await supabase
         .from('registrations')
         .insert([
