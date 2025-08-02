@@ -2,131 +2,284 @@
 
 import { useState } from "react";
 import { transformDirectoryData, getDepartments, type Contact } from '@/lib/directoryUtils';
+import directoryData from '@/data/directory.json';
 
+
+type ViewState = 'categories' | 'departments' | 'contacts';
+
+interface CategoryIconMap {
+  [key: string]: {
+    icon: string;
+    color: string;
+    description: string;
+  }
+}
+
+const categoryIcons: CategoryIconMap = {
+  "General & Revenue Administration": {
+    icon: "🏛️",
+    color: "bg-blue-100 text-blue-600",
+    description: "District administration, revenue collection, and governance"
+  },
+  "Planning & Development": {
+    icon: "📊",
+    color: "bg-green-100 text-green-600",
+    description: "Development planning, rural development, and project management"
+  },
+  "Health & Social Services": {
+    icon: "🏥",
+    color: "bg-red-100 text-red-600",
+    description: "Healthcare services, medical administration, and social welfare"
+  },
+  "Agriculture & Allied Sectors": {
+    icon: "🌾",
+    color: "bg-amber-100 text-amber-600",
+    description: "Agriculture, horticulture, animal husbandry, and rural economy"
+  },
+  "Education": {
+    icon: "🎓",
+    color: "bg-purple-100 text-purple-600",
+    description: "School education, colleges, and educational administration"
+  },
+  "Infrastructure & Utilities": {
+    icon: "🔧",
+    color: "bg-gray-100 text-gray-600",
+    description: "Water, electricity, irrigation, and public infrastructure"
+  },
+  "Commerce, Supplies & Cooperation": {
+    icon: "🏪",
+    color: "bg-orange-100 text-orange-600",
+    description: "Trade, civil supplies, industries, and cooperative societies"
+  },
+  "Police & Security": {
+    icon: "👮",
+    color: "bg-indigo-100 text-indigo-600",
+    description: "Law enforcement, security, and public safety"
+  },
+  "Forest & Environment": {
+    icon: "🌳",
+    color: "bg-emerald-100 text-emerald-600",
+    description: "Forest conservation, wildlife protection, and environment"
+  },
+  "Municipal Administration (Ieeja Municipality)": {
+    icon: "🏢",
+    color: "bg-cyan-100 text-cyan-600",
+    description: "Municipal services, town planning, and local governance"
+  }
+};
 
 export default function Directory() {
+  const [currentView, setCurrentView] = useState<ViewState>('categories');
+  const [selectedCategory, setSelectedCategory] = useState<string>('');
+  const [selectedDepartment, setSelectedDepartment] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedDepartment, setSelectedDepartment] = useState("All");
 
-  // Get data from JSON
-  const contactsData = transformDirectoryData();
-  const departments = ["All", ...getDepartments()];
+  const categories = Object.keys(directoryData);
 
-  const filteredContacts = contactsData
-    .filter(contact => {
-      const matchesSearch = 
-        contact.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        contact.designation.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        contact.phone.includes(searchTerm) ||
-        (contact.subCategory && contact.subCategory.toLowerCase().includes(searchTerm.toLowerCase()));
-      
-      const matchesDepartment = selectedDepartment === "All" || contact.department === selectedDepartment;
-      
-      return matchesSearch && matchesDepartment;
-    })
-    .sort((a, b) => {
-      // First sort by department order
-      const deptOrder = [
-        "General & Revenue Administration",
-        "Planning & Development", 
-        "Health & Social Services",
-        "Agriculture & Allied Sectors",
-        "Education",
-        "Infrastructure & Utilities",
-        "Commerce, Supplies & Cooperation",
-        "Police & Security",
-        "Forest & Environment",
-        "Municipal Administration (Ieeja Municipality)"
-      ];
-      
-      const aDeptIndex = deptOrder.indexOf(a.department);
-      const bDeptIndex = deptOrder.indexOf(b.department);
-      
-      if (aDeptIndex !== bDeptIndex) {
-        return aDeptIndex - bDeptIndex;
-      }
-      
-      // Then sort by priority within department
-      return (a.priority || 999) - (b.priority || 999);
-    });
+  const handleCategoryClick = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentView('departments');
+  };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-amber-100">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b border-yellow-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <a href="/" className="text-2xl font-bold text-yellow-600">ieeja.com</a>
-            </div>
-            <nav className="flex space-x-8">
-              <a href="/" className="text-gray-700 hover:text-yellow-600 font-medium">Home</a>
-              <a href="#" className="text-gray-700 hover:text-yellow-600 font-medium">About</a>
-              <a href="#" className="text-gray-700 hover:text-yellow-600 font-medium">Contact</a>
-            </nav>
-          </div>
-        </div>
-      </header>
+  const handleDepartmentClick = (department: string) => {
+    setSelectedDepartment(department);
+    setCurrentView('contacts');
+  };
 
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Ieeja Municipality <span className="text-yellow-600">Directory</span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Complete contact information for all municipal offices and staff
-          </p>
-        </div>
+  const handleBackToCategories = () => {
+    setCurrentView('categories');
+    setSelectedCategory('');
+    setSelectedDepartment('');
+  };
 
-        {/* Search and Filter Section */}
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-yellow-200 mb-8">
-          <div className="grid md:grid-cols-2 gap-4">
-            {/* Search Box */}
-            <div>
-              <label htmlFor="search" className="block text-sm font-medium text-gray-700 mb-2">
-                Search Directory
-              </label>
-              <input
-                type="text"
-                id="search"
-                placeholder="Search by name, designation, or phone..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
-              />
-            </div>
+  const handleBackToDepartments = () => {
+    setCurrentView('departments');
+    setSelectedDepartment('');
+  };
 
-            {/* Department Filter */}
-            <div>
-              <label htmlFor="department" className="block text-sm font-medium text-gray-700 mb-2">
-                Filter by Department
-              </label>
-              <select
-                id="department"
-                value={selectedDepartment}
-                onChange={(e) => setSelectedDepartment(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+  const getCurrentContacts = () => {
+    if (!selectedCategory || !selectedDepartment) return [];
+    
+    const categoryData = directoryData[selectedCategory as keyof typeof directoryData];
+    const department = categoryData.departments.find(dept => dept.name === selectedDepartment);
+    
+    if (!department) return [];
+    
+    return department.officials
+      .filter(official => official.name && official.name !== null)
+      .filter(official => {
+        if (!searchTerm) return true;
+        return (
+          official.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          official.designation.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          official.phone?.includes(searchTerm)
+        );
+      })
+      .map(official => ({
+        name: official.name!,
+        designation: official.designation,
+        phone: official.phone || 'N/A',
+        email: official.email || undefined,
+        address: official.address || undefined,
+        department: selectedCategory,
+        subCategory: selectedDepartment,
+        level: Array.isArray(official.level) ? official.level.join(', ') : official.level,
+        description: official.description
+      }));
+  };
+
+  const renderBreadcrumbs = () => {
+    return (
+      <div className="mb-6">
+        <nav className="flex" aria-label="Breadcrumb">
+          <ol className="inline-flex items-center space-x-1 md:space-x-3">
+            <li className="inline-flex items-center">
+              <button
+                onClick={handleBackToCategories}
+                className="inline-flex items-center text-sm font-medium text-yellow-600 hover:text-yellow-700"
               >
-                {departments.map(dept => (
-                  <option key={dept} value={dept}>{dept}</option>
-                ))}
-              </select>
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                </svg>
+                Categories
+              </button>
+            </li>
+            {selectedCategory && (
+              <li>
+                <div className="flex items-center">
+                  <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
+                  </svg>
+                  <button
+                    onClick={handleBackToDepartments}
+                    className="ml-1 text-sm font-medium text-yellow-600 hover:text-yellow-700 md:ml-2"
+                  >
+                    {selectedCategory}
+                  </button>
+                </div>
+              </li>
+            )}
+            {selectedDepartment && (
+              <li>
+                <div className="flex items-center">
+                  <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
+                  </svg>
+                  <span className="ml-1 text-sm font-medium text-gray-500 md:ml-2">{selectedDepartment}</span>
+                </div>
+              </li>
+            )}
+          </ol>
+        </nav>
+      </div>
+    );
+  };
+
+  const renderCategories = () => (
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {categories.map((category) => {
+        const iconData = categoryIcons[category];
+        return (
+          <div
+            key={category}
+            onClick={() => handleCategoryClick(category)}
+            className="bg-white rounded-xl shadow-lg p-6 border border-yellow-200 hover:shadow-xl transition-all duration-200 cursor-pointer group hover:border-yellow-300"
+          >
+            <div className="text-center">
+              <div className={`w-16 h-16 ${iconData?.color || 'bg-gray-100 text-gray-600'} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
+                <span className="text-2xl">{iconData?.icon || '📁'}</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">{category}</h3>
+              <p className="text-sm text-gray-600 mb-4">{iconData?.description || 'Administrative services'}</p>
+              <div className="flex items-center justify-center text-yellow-600">
+                <span className="text-sm font-medium">View Departments</span>
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
             </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+
+  const renderDepartments = () => {
+    if (!selectedCategory) return null;
+    
+    const categoryData = directoryData[selectedCategory as keyof typeof directoryData];
+    
+    return (
+      <div className="grid md:grid-cols-2 gap-6">
+        {categoryData.departments.map((department) => {
+          const officialCount = department.officials.filter(o => o.name && o.name !== null).length;
+          
+          return (
+            <div
+              key={department.name}
+              onClick={() => handleDepartmentClick(department.name)}
+              className="bg-white rounded-xl shadow-lg p-6 border border-yellow-200 hover:shadow-xl transition-all duration-200 cursor-pointer group hover:border-yellow-300"
+            >
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{department.name}</h3>
+                  <p className="text-gray-600 mb-4">
+                    {officialCount} {officialCount === 1 ? 'Official' : 'Officials'}
+                  </p>
+                  <div className="flex items-center text-yellow-600 group-hover:text-yellow-700">
+                    <span className="text-sm font-medium">View Contacts</span>
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="ml-4">
+                  <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  const renderContacts = () => {
+    const contacts = getCurrentContacts();
+    
+    return (
+      <>
+        {/* Search Box */}
+        <div className="bg-white rounded-xl shadow-lg p-6 border border-yellow-200 mb-8">
+          <div className="max-w-md mx-auto">
+            <label htmlFor="search" className="block text-sm font-medium text-gray-700 mb-2">
+              Search Contacts
+            </label>
+            <input
+              type="text"
+              id="search"
+              placeholder="Search by name, designation, or phone..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors"
+            />
           </div>
         </div>
 
         {/* Results Count */}
         <div className="mb-6">
           <p className="text-gray-600">
-            Showing {filteredContacts.length} of {contactsData.length} contacts
+            Showing {contacts.length} contacts in {selectedDepartment}
           </p>
         </div>
 
         {/* Contacts Grid */}
         <div className="grid lg:grid-cols-2 gap-6">
-          {filteredContacts.map((contact, index) => (
+          {contacts.map((contact, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-yellow-200 hover:shadow-xl transition-shadow">
               <div className="flex items-start space-x-4">
                 {/* Icon */}
@@ -144,9 +297,6 @@ export default function Directory() {
                     <div className="flex-1">
                       <h3 className="text-lg font-bold text-gray-900 mb-1">{contact.name}</h3>
                       <p className="text-yellow-600 font-medium mb-1">{contact.designation}</p>
-                      {contact.subCategory && (
-                        <p className="text-gray-500 text-sm mb-1">{contact.subCategory}</p>
-                      )}
                       {contact.level && (
                         <p className="text-blue-600 text-xs mb-2 font-medium">Level: {contact.level}</p>
                       )}
@@ -183,16 +333,11 @@ export default function Directory() {
                         
                         {contact.description && (
                           <div className="mt-2 pt-2 border-t border-gray-100">
-                            <p className="text-xs text-gray-600 italic line-clamp-2">{contact.description}</p>
+                            <p className="text-xs text-gray-600 italic line-clamp-3">{contact.description}</p>
                           </div>
                         )}
                       </div>
                     </div>
-
-                    {/* Department Badge */}
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 ml-2">
-                      {contact.department}
-                    </span>
                   </div>
                 </div>
               </div>
@@ -201,15 +346,59 @@ export default function Directory() {
         </div>
 
         {/* No Results */}
-        {filteredContacts.length === 0 && (
+        {contacts.length === 0 && (
           <div className="text-center py-12">
             <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <h3 className="mt-4 text-lg font-medium text-gray-900">No contacts found</h3>
-            <p className="mt-2 text-gray-500">Try adjusting your search or filter criteria.</p>
+            <p className="mt-2 text-gray-500">Try adjusting your search criteria.</p>
           </div>
         )}
+      </>
+    );
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-amber-100">
+      {/* Header */}
+      <header className="bg-white shadow-sm border-b border-yellow-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center">
+              <a href="/" className="text-2xl font-bold text-yellow-600">ieeja.com</a>
+            </div>
+            <nav className="flex space-x-8">
+              <a href="/" className="text-gray-700 hover:text-yellow-600 font-medium">Home</a>
+              <a href="#" className="text-gray-700 hover:text-yellow-600 font-medium">About</a>
+              <a href="#" className="text-gray-700 hover:text-yellow-600 font-medium">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Ieeja Municipality <span className="text-yellow-600">Directory</span>
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            {currentView === 'categories' && 'Choose a category to browse departments and contacts'}
+            {currentView === 'departments' && `Departments in ${selectedCategory}`}
+            {currentView === 'contacts' && `Contacts in ${selectedDepartment}`}
+          </p>
+        </div>
+
+        {/* Breadcrumbs */}
+        {currentView !== 'categories' && renderBreadcrumbs()}
+
+        {/* Content based on current view */}
+        {currentView === 'categories' && renderCategories()}
+        {currentView === 'departments' && renderDepartments()}
+        {currentView === 'contacts' && renderContacts()}
+
 
         {/* Back to Home */}
         <div className="text-center mt-12">
