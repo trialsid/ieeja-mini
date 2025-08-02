@@ -1,0 +1,853 @@
+{
+    "General & Revenue Administration": {
+      "departments": [
+        {
+          "name": "Collector's Office",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "Collector & District Magistrate",
+              "name": "B. M Santhosh, IAS",
+              "phone": "9100901600",
+              "email": "collector-gdwl@telangana.gov.in",
+              "address": "Integrated District Offices Complex - Jogulamba Gadwal 509125",
+              "description": "The Collector and District Magistrate is the chief administrative and revenue officer of the district. Responsibilities include land revenue collection, maintaining law and order, and overseeing the implementation of government programs. [3, 27, 39, 41, 42]"
+            },
+            {
+              "level": "District",
+              "designation": "Additional Collector (Revenue)",
+              "name": "V. Laxminarayana",
+              "phone": "9100901601",
+              "email": "jc-gdwl@telangana.gov.in",
+              "address": "Integrated District Offices Complex - Jogulamba Gadwal 509125",
+              "description": "Assists the District Collector in all matters related to revenue administration, including land assessment, revenue collection, and maintenance of land records. [39]"
+            },
+            {
+              "level": "District",
+              "designation": "Additional Collector (Local Bodies)",
+              "name": "Sri B. Narsing Rao (FAC)",
+              "phone": "9391489616",
+              "email": "aclocalbodiesgadwal@gmail.com",
+              "address": "Integrated District Offices Complex - Jogulamba Gadwal",
+              "description": "Oversees the functioning of local government bodies within the district, ensuring their efficient administration and the implementation of development schemes."
+            }
+          ]
+        },
+        {
+          "name": "Revenue Division",
+          "officials": [
+            {
+              "level": "District (Revenue Division)",
+              "designation": "Revenue Divisional Officer",
+              "name": "Smt. L. Alivelu",
+              "phone": "9000101502",
+              "email": "rdo.gdwl@gmail.com",
+              "address": "RDO Office , Jogulamba Gadwal",
+              "description": "The Revenue Divisional Officer is in charge of a sub-division within the district and is responsible for revenue administration, law and order, and other developmental activities in their jurisdiction."
+            }
+          ]
+        },
+        {
+          "name": "Mandal Revenue Office (Tahsildar)",
+          "officials": [
+            {
+              "level": "Mandal",
+              "designation": "Tahsildar",
+              "name": "Smt. Jyothi",
+              "phone": "9000101495",
+              "email": "tah.ieeja@gmail.com",
+              "address": "Ieeza Tahsildar Office, Jogulamba Gadwal",
+              "description": "A Tahsildar is the key officer in a Taluk or Mandal, responsible for collecting land revenue, maintaining land records, and acting as an Executive Magistrate. [10, 15, 17, 22, 26]"
+            },
+            {
+              "level": "Village",
+              "designation": "Village Revenue Officer (VRO)",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "The Village Revenue Officer is responsible for maintaining land records, collecting revenue, and assisting in various administrative tasks at the village level."
+            },
+            {
+              "level": "Village",
+              "designation": "Village Revenue Assistant (VRA)",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Assists the Village Revenue Officer in their duties, including the collection of revenue and maintenance of village records."
+            }
+          ]
+        },
+        {
+          "name": "Legal Metrology & Audit",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District Legal Metrology Officer",
+              "name": "Sri Chitti Babu",
+              "phone": "9885953169",
+              "email": null,
+              "address": "Legal Metrology Office, Jogulamba Gadwal",
+              "description": "Enforces laws related to weights and measures to ensure fair trade practices and consumer protection. [4, 13, 45, 47, 50]"
+            },
+            {
+              "level": "District",
+              "designation": "Legal Metrology Officer",
+              "name": "K Venkateshwarlu",
+              "phone": "9701754324",
+              "email": null,
+              "address": null,
+              "description": "Inspects and verifies the accuracy of weights and measures used in trade and commerce. [4, 13, 45, 47, 50]"
+            },
+            {
+              "level": "District",
+              "designation": "District Audit Officer",
+              "name": "K.Sukravardhan Reddy",
+              "phone": "9705343091",
+              "email": null,
+              "address": null,
+              "description": "Conducts audits of government departments and local bodies within the district to ensure financial accountability."
+            }
+          ]
+        }
+      ]
+    },
+    "Planning & Development": {
+      "departments": [
+        {
+          "name": "District Planning",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "Chief Planning Officer",
+              "name": "Sri Yoganand (FAC)",
+              "phone": "9290699448",
+              "email": "cpojogulamba@gmail.com",
+              "address": "Chief Planning Office Jogulamba Gadwal",
+              "description": "Responsible for the formulation, monitoring, and evaluation of district-level development plans and schemes."
+            },
+            {
+              "level": "District",
+              "designation": "District Town and Country Planning Officer",
+              "name": "Sri Annaldas Kurmaiah (FAC)",
+              "phone": "9398044994",
+              "email": null,
+              "address": "District Town and Country Planning Office, Jogulamba Gadwal",
+              "description": "Oversees the planning and regulation of urban and rural development to ensure orderly growth."
+            }
+          ]
+        },
+        {
+          "name": "Rural Development (DRDA & ZP)",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District Rural Development Officer (DRDA)",
+              "name": "Sri B. Narsing Rao",
+              "phone": "7331155371",
+              "email": "drdojgdl@gmail.com",
+              "address": "Rural Development Office Jogulamba Gadwal",
+              "description": "Implements various rural development and poverty alleviation programs in the district."
+            },
+            {
+              "level": "District",
+              "designation": "CEO (ZP)",
+              "name": "Narsing Rao (FAC) DRDO",
+              "phone": "9281481969",
+              "email": "zppjgwl@gmail.com",
+              "address": "Panchayat Raj Office, Jogulamba Gadwal",
+              "description": "The Chief Executive Officer of the Zilla Parishad is responsible for the overall administration and implementation of schemes through the Panchayat Raj system."
+            },
+            {
+              "level": "District",
+              "designation": "Deputy CEO (ZP)",
+              "name": "Sri Nagendram",
+              "phone": "7989414716",
+              "email": null,
+              "address": "Panchayat Raj Office, Jogulamba Gadwal",
+              "description": "Assists the CEO of the Zilla Parishad in their administrative and developmental functions."
+            }
+          ]
+        },
+        {
+          "name": "Mandal Development (MPDO)",
+          "officials": [
+            {
+              "level": "Mandal",
+              "designation": "Mandal Panchayat Officer (MPO)",
+              "name": "Bijrula Mahesh",
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Supervises the functioning of Gram Panchayats within the Mandal."
+            },
+            {
+              "level": "Mandal",
+              "designation": "Mandal Parishad Development Officer (MPDO)",
+              "name": "K. Venkateswarlu (FAC)",
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "The executive officer of the Mandal Parishad, responsible for implementing development programs at the Mandal level."
+            }
+          ]
+        }
+      ]
+    },
+    "Police & Security": {
+      "departments": [
+        {
+          "name": "Local Police",
+          "officials": [
+            {
+              "level": [
+                "Mandal",
+                "Town"
+              ],
+              "designation": "Sub-Inspector Of Police",
+              "name": "MENUKONDA VIJAYBHASKAR",
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "The first investigating officer in the police hierarchy, responsible for maintaining law and order, preventing and detecting crime in their jurisdiction."
+            },
+            {
+              "level": [
+                "Town",
+                "Municipality"
+              ],
+              "designation": "Circle Inspector of Police",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Supervises the functioning of multiple police stations within a circle and is responsible for crime control and maintenance of law and order."
+            }
+          ]
+        }
+      ]
+    },
+    "Agriculture & Allied Sectors": {
+      "departments": [
+        {
+          "name": "Agriculture",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District Agriculture Officer (DAO)",
+              "name": "K. Govind Naik / Govindu Naik",
+              "phone": "7288894377",
+              "email": null,
+              "address": "Agriculture Office, Jogulamba Gadwal",
+              "description": "Oversees the implementation of agricultural development schemes, provides technical guidance to farmers, and promotes modern agricultural practices."
+            },
+            {
+              "level": "Mandal",
+              "designation": "Agriculture Extension Officer (AEO)",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Acts as a link between agricultural research and farmers, providing them with information on new technologies and practices. [12, 30, 34, 40, 44]"
+            }
+          ]
+        },
+        {
+          "name": "Horticulture & Sericulture",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District Horticulture & Sericulture Officer",
+              "name": "Sri Akbar",
+              "phone": "7997725196",
+              "email": "dhsogadwal@gmail.com",
+              "address": "Dist. Horticulture Sericulture Office, Jogulamba Gadwal",
+              "description": "Promotes the cultivation of fruits, vegetables, flowers, and the rearing of silkworms through various government schemes."
+            },
+            {
+              "level": "District",
+              "designation": "Assistant Director, Horticulture/Sericulture",
+              "name": "P.Somi Reddy",
+              "phone": "8374449807",
+              "email": null,
+              "address": null,
+              "description": "Assists the District Officer in the promotion and development of horticulture and sericulture activities."
+            }
+          ]
+        },
+        {
+          "name": "Animal Husbandry",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District AH Officer",
+              "name": "Dr.C.Dhanraj",
+              "phone": "7702771292",
+              "email": null,
+              "address": "Veternary & Animal Husbandary Office, Jogulamba Gadwal",
+              "description": "Oversees the health and welfare of livestock, implements disease control programs, and promotes animal breeding and dairy development."
+            },
+            {
+              "level": [
+                "Mandal",
+                "Town"
+              ],
+              "designation": "Veterinary Assistant Surgeon",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Provides veterinary services, including treatment of animals, artificial insemination, and disease investigation at the local level."
+            }
+          ]
+        },
+        {
+          "name": "Fisheries",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District Fisheries Officer",
+              "name": "B.Laxmappa",
+              "phone": "9441076533",
+              "email": "dfofisheriesgadwal@gmail.com",
+              "address": "Fisheries Office, Jogulamba Gadwal",
+              "description": "Promotes fish culture in the district by providing technical guidance and financial assistance to fishermen."
+            }
+          ]
+        },
+        {
+          "name": "Marketing",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District Marketing Officer",
+              "name": "S.Pushpamma",
+              "phone": "7330733680",
+              "email": "dmogadwal@gmail.com",
+              "address": "Marketing Office, Jogulamba Gadwal",
+              "description": "Oversees the functioning of agricultural markets, ensures fair prices for farmers' produce, and implements marketing-related schemes."
+            },
+            {
+              "level": [
+                "Town",
+                "Municipality"
+              ],
+              "designation": "Agriculture Market Committee (AMC) Secretary",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Manages the day-to-day affairs of the agricultural market, including auctions, fee collection, and maintenance of market infrastructure."
+            }
+          ]
+        }
+      ]
+    },
+    "Infrastructure & Utilities": {
+      "departments": [
+        {
+          "name": "Irrigation & Water Resources",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District Irrigation Officer",
+              "name": "Sri Srinivasulu",
+              "phone": "9182562401",
+              "email": "diojogulambagadwal@gmail.com",
+              "address": "Irrigation Office, Jogulamba Gadwal",
+              "description": "Responsible for the maintenance and management of irrigation projects and water resources within the district."
+            },
+            {
+              "level": "District",
+              "designation": "District Ground Water Officer",
+              "name": "Dr.G. Mohan (I/c)",
+              "phone": "9490895869",
+              "email": "gwdgadwal@gmail.com",
+              "address": "Ground Water Office Jogulamba Gadwal",
+              "description": "Monitors and manages the groundwater resources in the district, including conducting surveys and giving clearances for groundwater extraction."
+            },
+            {
+              "level": "District",
+              "designation": "Executive Engineer Officer MB (Water Grid)",
+              "name": "Smt. Parameshwari (FAC)",
+              "phone": "9100120493",
+              "email": null,
+              "address": "Executive Engineer Office MB (Water Grid), Jogulamba Gadwal",
+              "description": "Responsible for the execution and maintenance of piped drinking water supply projects under the water grid scheme."
+            }
+          ]
+        },
+        {
+          "name": "Electricity (TSSPDCL)",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "Superintending Engineer (SE)",
+              "name": "Sri Thirupathi Rao (FAC)",
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Heads the electricity distribution network in the district, responsible for ensuring uninterrupted power supply and managing the revenue and maintenance operations."
+            },
+            {
+              "level": [
+                "Mandal",
+                "Town"
+              ],
+              "designation": "Assistant Engineer / Sub-Engineer",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Manages the electricity distribution and maintenance at a sub-divisional level."
+            },
+            {
+              "level": [
+                "Village",
+                "Ward"
+              ],
+              "designation": "Lineman",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Carries out the maintenance of power lines and attends to local power supply issues."
+            }
+          ]
+        },
+        {
+          "name": "Postal Service",
+          "officials": [
+            {
+              "level": [
+                "Town",
+                "Village"
+              ],
+              "designation": "Postmaster",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Manages the operations of a post office, including mail delivery, financial services, and customer relations. [8, 14, 21, 31, 37]"
+            }
+          ]
+        }
+      ]
+    },
+    "Commerce, Supplies & Cooperation": {
+      "departments": [
+        {
+          "name": "Civil Supplies",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District Civil Supplies Officer (DCSO)",
+              "name": "Sri Swamy Kumar",
+              "phone": "7382310713",
+              "email": null,
+              "address": "District Civil Supplies Office, Jogulamba Gadwal",
+              "description": "Ensures the proper functioning of the public distribution system (PDS) and the availability of essential commodities to the public at fair prices."
+            },
+            {
+              "level": "District",
+              "designation": "District Manager (Civil Supplies)",
+              "name": "Smt. K. Vimala",
+              "phone": "9963105948",
+              "email": null,
+              "address": "Civil Supplies Office Jogulamba Gadwal",
+              "description": "Manages the procurement, storage, and distribution of food grains and other essential commodities under the PDS."
+            },
+            {
+              "level": "District",
+              "designation": "District Civil Supply Officer",
+              "name": "Chandera Shekar Reddy",
+              "phone": "9618938736",
+              "email": null,
+              "address": null,
+              "description": "Assists in the overall management and monitoring of the public distribution system in the district."
+            },
+            {
+              "level": [
+                "Town",
+                "Village"
+              ],
+              "designation": "Fair Price Shop (Ration) Dealer",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Distributes essential commodities to ration card holders at government-approved prices."
+            }
+          ]
+        },
+        {
+          "name": "Industries & Commerce",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "General Manager, District Industries Centre",
+              "name": "Sri T. Ramlingeshwar Goud",
+              "phone": "8688921546",
+              "email": "gmdic-gdwl-inds@telangana.gov.in",
+              "address": "District Industries Center, Jogulamba Gadwal",
+              "description": "Promotes industrial development in the district by providing assistance and guidance to entrepreneurs."
+            },
+            {
+              "level": "District",
+              "designation": "Assistant Director (Handlooms & Textiles)",
+              "name": "Sri Govindaiah",
+              "phone": "9573730056",
+              "email": "adhandtex@gmail.com",
+              "address": "Handlooms & Textiles Office Jogulamba Gadwal",
+              "description": "Works for the development and welfare of weavers and promotes the handloom and textile industry."
+            }
+          ]
+        },
+        {
+          "name": "Cooperation",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District Co-Operative Officer",
+              "name": "Prasad Rao",
+              "phone": "9100115705",
+              "email": null,
+              "address": "CO-OPERATIVE Office, Jogulamba Gadwal",
+              "description": "Supervises and regulates the functioning of cooperative societies in the district."
+            },
+            {
+              "level": "District",
+              "designation": "District Registrar, Cooperation",
+              "name": "Sri M Ravindhar",
+              "phone": "9908004846",
+              "email": null,
+              "address": "District Registrar Office Jogulamba Gadwal",
+              "description": "Responsible for the registration, administration, and regulation of cooperative societies in the district."
+            }
+          ]
+        }
+      ]
+    },
+    "Health & Social Services": {
+      "departments": [
+        {
+          "name": "Health",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District Medical & Health Officer",
+              "name": "Sri Siddappa (I/c)",
+              "phone": "7013959920",
+              "email": "dmhojogulamba@gmail.com",
+              "address": "District Medical & Health Office, Jogulamba Gadwal",
+              "description": "The chief medical officer of the district, responsible for the implementation of all health and family welfare programs. [7, 46, 48, 49]"
+            },
+            {
+              "level": [
+                "Mandal",
+                "Town"
+              ],
+              "designation": "Medical Officer (Primary Health Centre)",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Provides primary healthcare services to the community, including curative, preventive, and promotive health services. [51]"
+            },
+            {
+              "level": [
+                "Village",
+                "Ward"
+              ],
+              "designation": "Auxiliary Nurse Midwife (ANM)",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "A village-level female health worker who provides basic health and maternal and child health services. [6, 33, 36, 38, 43]"
+            },
+            {
+              "level": [
+                "Village",
+                "Ward"
+              ],
+              "designation": "Accredited Social Health Activist (ASHA Worker)",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "A community health worker who acts as a bridge between the community and the public health system."
+            }
+          ]
+        },
+        {
+          "name": "Social Welfare",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District BC Development Officer",
+              "name": "Smt. Nushitha (FAC)",
+              "phone": "9441030602",
+              "email": "dbcdo.gadwal@gmail.com",
+              "address": "BC welfare Office, Jogulamba Gadwal",
+              "description": "Implements welfare schemes for the development of backward classes in the district."
+            },
+            {
+              "level": "District",
+              "designation": "District BC Welfare Officer",
+              "name": "K Rajanna",
+              "phone": "9701111297",
+              "email": null,
+              "address": null,
+              "description": "Oversees the implementation of various welfare and educational schemes for the backward classes."
+            }
+          ]
+        }
+      ]
+    },
+    "Education": {
+      "departments": [
+        {
+          "name": "School & Intermediate Education",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District Educational Officer",
+              "name": "Sri Abdul Gani",
+              "phone": "7995087603",
+              "email": "deogadwal@gmail.com",
+              "address": "District School Education Office, Jogulamba Gadwal",
+              "description": "The District Educational Officer is responsible for the overall management and supervision of the education system in the district. This includes implementing educational policies, inspecting schools, and ensuring quality education. [2, 28, 29, 32, 35]"
+            },
+            {
+              "level": "District",
+              "designation": "Nodal Officer, Dist. Intermediate Educational Officer",
+              "name": "Sri M.Hrudaya Raju",
+              "phone": "7997994365",
+              "email": "dieo.jogulamba@gmail.com",
+              "address": "Intermediate Educational Officer Jogulamba Gadwal",
+              "description": "Oversees the administration and academic activities of intermediate colleges (junior colleges) in the district."
+            },
+            {
+              "level": "Mandal",
+              "designation": "Mandal Education Officer (MEO)",
+              "name": "Sri Ramulu Dayal (FAC)",
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Supervises the functioning of schools at the Mandal level and ensures the implementation of educational programs."
+            },
+            {
+              "level": [
+                "Town",
+                "Village"
+              ],
+              "designation": "Head Master/Principal (Govt. School)",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Manages the day-to-day administration and academic activities of a government school."
+            }
+          ]
+        }
+      ]
+    },
+    "Forest & Environment": {
+      "departments": [
+        {
+          "name": "Forest Department",
+          "officials": [
+            {
+              "level": "District",
+              "designation": "District Forest Officer",
+              "name": "Smt Vasantha",
+              "phone": "9440810062",
+              "email": null,
+              "address": "Forest Office, Jogulamba Gadwal",
+              "description": "Manages and protects the forests, wildlife, and environment in the district."
+            },
+            {
+              "level": "District",
+              "designation": "District Forest Officer",
+              "name": "Sri K.A.V.S Prasad Reddy, IFS (I/c)",
+              "phone": "8142412347",
+              "email": null,
+              "address": "Forest Office, Jogulamba Gadwal",
+              "description": "Manages and protects the forests, wildlife, and environment in the district."
+            }
+          ]
+        }
+      ]
+    },
+    "Municipal Administration (Ieeja Municipality)": {
+      "departments": [
+        {
+          "name": "General Administration",
+          "officials": [
+            {
+              "level": [
+                "Town",
+                "Municipality"
+              ],
+              "designation": "Commissioner / Municipal Commissioner",
+              "name": "S. Rajaiah / Sri T Dasharath",
+              "phone": "8897509127",
+              "email": "mc.ieejanp@gmail.com",
+              "address": "Municipal Commissioner Office Ieeja, Jogulamba Gadwal",
+              "description": "The executive head of the municipality, responsible for the overall administration and implementation of municipal laws and resolutions."
+            },
+            {
+              "level": [
+                "Town",
+                "Municipality"
+              ],
+              "designation": "Manager",
+              "name": "Vankataiah",
+              "phone": null,
+              "email": null,
+              "address": "Nagara panchayath Ieeja Office. H.No.6-39",
+              "description": "Supervises the day-to-day administrative functions of the municipal office."
+            },
+            {
+              "level": [
+                "Town",
+                "Municipality"
+              ],
+              "designation": "Junior Assistant",
+              "name": "Manyam",
+              "phone": null,
+              "email": null,
+              "address": "Nagara panchayath Ieeja Office. H.No.6-39",
+              "description": "Provides clerical and administrative support in the municipal office."
+            },
+            {
+              "level": [
+                "Town",
+                "Municipality"
+              ],
+              "designation": "PRP, Urban Community Development (UCD) Section",
+              "name": "MALA LAXMI",
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Works on community development projects and poverty alleviation programs in urban areas."
+            },
+            {
+              "level": [
+                "Town",
+                "Municipality"
+              ],
+              "designation": "Sanitary Inspector",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "A key public health professional responsible for inspecting and enforcing sanitation and hygiene standards in public and private establishments to prevent health hazards and ensure community well-being. [5, 16, 18, 20, 23]"
+            },
+            {
+              "level": [
+                "Town",
+                "Municipality",
+                "Ward"
+              ],
+              "designation": "Sanitation Worker",
+              "name": null,
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Responsible for cleaning public spaces, managing waste, and maintaining the sanitation infrastructure to ensure a clean and healthy environment. [9, 11, 19, 24, 25]"
+            }
+          ]
+        },
+        {
+          "name": "Municipal Engineering & Town Planning",
+          "officials": [
+            {
+              "level": [
+                "Town",
+                "Municipality"
+              ],
+              "designation": "Assistant Engineer",
+              "name": "Khaja hussain (FAC)",
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Supervises and executes public works such as roads, buildings, and drainage systems within the municipality."
+            },
+            {
+              "level": [
+                "Town",
+                "Municipality"
+              ],
+              "designation": "Town Planning Building Overseer",
+              "name": "B. Anjaneyulu (FAC)",
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Inspects buildings and ensures that construction activities are in accordance with the approved plans and building regulations."
+            }
+          ]
+        },
+        {
+          "name": "Municipal Finance",
+          "officials": [
+            {
+              "level": [
+                "Town",
+                "Municipality"
+              ],
+              "designation": "Bill Collector",
+              "name": "Prakash Babu",
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Responsible for the collection of municipal taxes, fees, and other revenues."
+            }
+          ]
+        },
+        {
+          "name": "Right to Information (RTI)",
+          "officials": [
+            {
+              "level": [
+                "Town",
+                "Municipality"
+              ],
+              "designation": "1st Appellate Authority",
+              "name": "R.VENKANNA",
+              "phone": null,
+              "email": null,
+              "address": null,
+              "description": "Hears appeals against the decisions of the Public Information Officer under the Right to Information Act."
+            },
+            {
+              "level": [
+                "Town",
+                "Municipality"
+              ],
+              "designation": "Chief Public Information officer",
+              "name": "Vankataiah",
+              "phone": null,
+              "email": null,
+              "address": "Nagara panchayath Ieeja Office. H.No.6-39",
+              "description": "Provides information to citizens who file applications under the Right to Information Act."
+            },
+            {
+              "level": [
+                "Town",
+                "Municipality"
+              ],
+              "designation": "Assistant Public Information officer",
+              "name": "Manyam",
+              "phone": null,
+              "email": null,
+              "address": "Nagara panchayath Ieeja Office. H.No.6-39",
+              "description": "Assists the Public Information Officer in providing information and handling RTI applications."
+            }
+          ]
+        }
+      ]
+    }
+  }
