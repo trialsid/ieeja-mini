@@ -8,6 +8,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
+              <img 
+                src="/map-mini.svg" 
+                alt="Ieeja Map" 
+                className="w-8 h-8 mr-3"
+              />
               <h1 className="text-2xl font-bold text-yellow-600">ieeja.com</h1>
             </div>
             <nav className="flex space-x-8">
@@ -23,9 +28,21 @@ export default function Home() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-5xl font-bold text-gray-900 mb-6">
             Welcome to <span className="text-yellow-600">ieeja.com</span>
           </h2>
+          
+          {/* Map SVG */}
+          <div className="flex justify-center mb-6">
+            <div className="w-full max-w-md mx-auto">
+              <img 
+                src="/map.svg" 
+                alt="Ieeja Municipality Map" 
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+          
           <p className="text-xl text-gray-800 max-w-2xl mx-auto mb-6">
             Your gateway to exam registration and directory services
           </p>
