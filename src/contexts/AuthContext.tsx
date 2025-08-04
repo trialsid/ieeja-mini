@@ -27,6 +27,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
 
     const getSession = async () => {
+      if (!supabase) return;
       const { data: { session } } = await supabase.auth.getSession();
       setSession(session);
       setUser(session?.user ?? null);
