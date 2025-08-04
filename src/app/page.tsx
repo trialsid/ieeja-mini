@@ -1,4 +1,5 @@
 import InstallButton from "@/components/InstallButton";
+import { SignInButton, SignUpButton, UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
 export default function Home() {
   return (
@@ -15,10 +16,29 @@ export default function Home() {
               />
               <h1 className="text-2xl font-bold text-yellow-600">ieeja.com</h1>
             </div>
-            <nav className="flex space-x-8">
+            <nav className="flex items-center space-x-8">
               <a href="#" className="text-gray-700 hover:text-yellow-600 font-medium">Home</a>
               <a href="#" className="text-gray-700 hover:text-yellow-600 font-medium">About</a>
               <a href="#" className="text-gray-700 hover:text-yellow-600 font-medium">Contact</a>
+              
+              <SignedOut>
+                <div className="flex items-center space-x-4">
+                  <SignInButton>
+                    <button className="text-gray-700 hover:text-yellow-600 font-medium">
+                      Sign In
+                    </button>
+                  </SignInButton>
+                  <SignUpButton>
+                    <button className="bg-yellow-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-yellow-700 transition-colors">
+                      Sign Up
+                    </button>
+                  </SignUpButton>
+                </div>
+              </SignedOut>
+              
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
             </nav>
           </div>
         </div>
