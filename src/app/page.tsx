@@ -1,6 +1,12 @@
+"use client";
+
 import InstallButton from "@/components/InstallButton";
+import { useAuth } from "@/contexts/AuthContext";
+import Link from "next/link";
 
 export default function Home() {
+  const { user, loading } = useAuth();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-amber-100">
       {/* Header */}
@@ -16,9 +22,19 @@ export default function Home() {
               <h1 className="text-2xl font-bold text-yellow-600">ieeja.com</h1>
             </div>
             <nav className="flex space-x-8">
-              <a href="#" className="text-gray-700 hover:text-yellow-600 font-medium">Home</a>
-              <a href="#" className="text-gray-700 hover:text-yellow-600 font-medium">About</a>
-              <a href="#" className="text-gray-700 hover:text-yellow-600 font-medium">Contact</a>
+              {!loading && (
+                user ? (
+                  <>
+                    <Link href="/dashboard" className="text-gray-700 hover:text-yellow-600 font-medium">Dashboard</Link>
+                    <span className="text-gray-700">Hello, {user.user_metadata?.username || user.email}</span>
+                  </>
+                ) : (
+                  <>
+                    <Link href="/auth/login" className="text-gray-700 hover:text-yellow-600 font-medium">Login</Link>
+                    <Link href="/auth/register" className="bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 transition-colors">Sign Up</Link>
+                  </>
+                )
+              )}
             </nav>
           </div>
         </div>
@@ -67,9 +83,9 @@ export default function Home() {
               <p className="text-gray-800 mb-6">
                 Quick and easy exam registration process. Register for upcoming exams and track your applications.
               </p>
-              <a href="/register" className="inline-block bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors w-full text-center">
+              <Link href="/register" className="inline-block bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors w-full text-center">
                 Register Now
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -85,9 +101,9 @@ export default function Home() {
               <p className="text-gray-800 mb-6">
                 Find contact information quickly. Search our comprehensive directory for staff and department contacts.
               </p>
-              <a href="/directory" className="inline-block border border-yellow-600 text-yellow-600 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-50 transition-colors w-full text-center">
+              <Link href="/directory" className="inline-block border border-yellow-600 text-yellow-600 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-50 transition-colors w-full text-center">
                 Browse Directory
-              </a>
+              </Link>
             </div>
           </div>
         </div>
